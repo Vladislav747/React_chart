@@ -254,7 +254,7 @@ class App extends Component {
           />
           
           <ChartBar
-            chartData={this.state.chartData1}
+            chartData={this.state.chartData}
             location="Massachusetts"
             legendPosition="bottom"
           />

@@ -9,29 +9,18 @@ class ChartBar extends Component {
     };
   }
 
-  static defaultProps = {
-    displayTitle: true,
-    displayLegend: true,
-    position: "right",
-    location: "City"
-  };
 
-  chartRef = React.createRef();
-
-  componentDidMount() {
-    
+   createChart(self){
+    const myChartRef = self.chartRef.current.getContext("2d");
   
-
-    const myChartRef = this.chartRef.current.getContext("2d");
-
-    console.log(this.state.chartData.length, "check");
+    console.log(self.state.chartData.length, "check");
     new Chart(myChartRef, {
       type: "bar",
-      data: this.props.chartData,
+      data: self.props.chartData,
       options: {
         legend: {
           display: true,
-          position: this.props.legendPosition
+          position: self.props.legendPosition
         },
         scales: {
           xAxes: [
@@ -47,16 +36,36 @@ class ChartBar extends Component {
         }
       }
     });
+
     console.log(myChartRef);
-  
   }
 
-  shouldComponentUpdate(){
-    console.log(this.props.chartData, "searching for props");
+  static defaultProps = {
+    displayTitle: true,
+    displayLegend: true,
+    position: "right",
+    location: "City"
+  };
+
+  chartRef = React.createRef();
+
+  componentDidMount() {
+
+    var self = this;
+    this.createChart(self);
     
-
-
   }
+
+  componentDidUpdate(prevProps){
+    console.log(prevProps, "prevProps");
+
+    if(prevProps.chartData !== this.props.chartData){
+     var self = this;
+      this.createChart(self);
+    }
+  }
+
+  
   render() {
     return (
       <div className="asd">
