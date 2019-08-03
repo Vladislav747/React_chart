@@ -126,11 +126,6 @@ class App extends Component {
   }
 
 
-
-
-
-
-
   // async getChartData() {
 
   //   let url =

@@ -42,6 +42,24 @@ this.handleChange = this.handleChange.bind(this);
         }
       }) 
         
+
+
+  /*Удаление элементов при щелчке */
+
+//   console.log(deviceTypes, "Окончательный массив до удаления");
+
+//   var arrChecked = ["101"];
+
+//   arrChecked.forEach(function(elem){
+//     delete deviceTypes[elem];
+//   });
+
+ 
+//   console.log(deviceTypes, "Окончательный массив после удаления");
+
+
+/* конец */
+
       }
    
   
