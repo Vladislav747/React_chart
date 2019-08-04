@@ -1,4 +1,4 @@
-Тестовое задение for Tridivi - проект semetrix
+Тестовое задение for Tridivi - проект Seemetrix
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
