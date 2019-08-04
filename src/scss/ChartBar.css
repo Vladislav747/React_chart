@@ -1,0 +1,14 @@
+    .chartResult{
+    display: flex;
+    justify-content: center;
+  }
+  
+  #myChart{
+    height: 475px;
+    width: 650px;
+  }
+  
+  .chart{
+    margin-left: 100px;
+  }
+  

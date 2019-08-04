@@ -1,0 +1,26 @@
+.listPhones-icon{
+    display: none;
+  }
+  
+  .listPhones-icon.checked{
+    display: inline;
+  }
+  .listPhones-types{
+    padding-top:20px;
+  }
+  
+  .listPhones-type{
+    width:100px;
+    display:flex;
+    justify-content: space-between;
+    min-height: 30px;
+    
+  }
+  
+  .listPhones-type label{
+    cursor:pointer;
+  }
+  
+  .listPhones-type input[type="checkbox"]{
+    display: none;
+  }

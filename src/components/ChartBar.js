@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Chart from "chart.js";
-
+import "../scss/ChartBar.css";
 class ChartBar extends Component {
 
   constructor(props) {
@@ -17,6 +17,7 @@ class ChartBar extends Component {
         type: "bar",
         data: this.props.chartData,
         options: {
+          
           legend: {
             display: true,
             position: this.props.legendPosition
