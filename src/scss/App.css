@@ -32,10 +32,36 @@
   }
 }
 
-/* .chartResult{
+ .chartResult{
   display: flex;
 }
 
+#myChart{
+  height: 275px;
+  width: 450px;
+}
+
+.listPhones-types{
+  padding-top:20px;
+}
+
+.listPhones-type{
+  width:100px;
+}
+
+.listPhones-type input[type="checkbox"]{
+  display: none;
+}
+
+
+.chart{
+  margin-left: 100px;
+}
+.listPhones-icon{
+  display: inline;
+  float:right;
+}
+/*
 .settings{
   display: flex;
   flex-direction: column;
