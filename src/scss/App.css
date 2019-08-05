@@ -13,22 +13,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-
-
-
- .chartResult{
-  display: flex;
-  justify-content: center;
-}
-
-#myChart{
-  height: 375px;
-  width: 550px;
-}
-
-
-
-.chart{
-  margin-left: 100px;
-}

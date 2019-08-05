@@ -16,7 +16,6 @@ class App extends Component {
     };
 
     this.updateData = this.updateData.bind(this);
-
   }
 
   componentWillMount() {
@@ -25,7 +24,6 @@ class App extends Component {
       this.setState({parsedData: parseData(response.data.data.o)});
       var chartData = generateChartData(this.state.parsedData.deviceLabels, this.state.parsedData);
 
-      console.log(this.state.parsedData, "parsedData");
       
       this.setState({
         deviceTypes: this.state.parsedData.deviceLabels,
@@ -35,11 +33,13 @@ class App extends Component {
     });
   }
 
+  /*Пересчет данных  при выборе опции в компоненте Settings*/
   updateData = (devices) => {
     var data = generateChartData(devices, this.state.parsedData);
     this.setState({chartData: data});
   }
 
+  /*Получение данных*/
   async getData (){
     const url = "https://analytics.3divi.ru/api/v2/statistics/user/43/devices/dates/ages/?key=050a11d6e8cf4dc5bac15bae6a14cec4&b=2016/01/01%2000:00:00&e=2016/07/01%2013:00:00&tzo=0";
     const res = await axios(url);

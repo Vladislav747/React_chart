@@ -5,11 +5,18 @@ class ChartBar extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      chart: {}
+    };
     this.createChart = this.createChart.bind(this);
   }
 
   chartRef = React.createRef();
 
+
+  /**
+   * Создание и инициализация графика
+   */
   createChart(){
     const myChartRef = this.chartRef.current.getContext("2d");
     
@@ -45,10 +52,8 @@ class ChartBar extends Component {
   }
 
   static defaultProps = {
-    displayTitle: true,
-    displayLegend: true,
-    position: "right",
-    location: "City"
+    legendPosition: "bottom",
+    chart:{}
   };
 
 
@@ -60,6 +65,7 @@ class ChartBar extends Component {
   componentDidUpdate(prevProps){
 
     if(prevProps.chartData !== this.props.chartData){
+
       this.state.chart.data = this.props.chartData;
       this.state.chart.update();
     }

@@ -11,6 +11,9 @@ class Settings extends Component {
     deviceTypes: {}
   };
 
+  /**
+   * Обработка клика по опции выбора.
+   */
   handleChange(event) {
     var checkedDevices = [];
     var checkBoxes = $('.listPhones-types input[type="checkbox"]');
@@ -24,6 +27,7 @@ class Settings extends Component {
     $(event.target)
       .next()
       .toggleClass("checked");
+
     this.props.updateData(checkedDevices);
   }
 

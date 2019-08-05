@@ -1,3 +1,9 @@
+/**
+ * 
+ * Парсинг данных для последующего формирования графика
+ * 
+ * @param  {} data
+ */
 export function parseData(data) {
 
     var deviceTypes = {};
@@ -37,7 +43,16 @@ export function parseData(data) {
     return deviceTypes;
   
   }
+
   
+  
+  /**
+   * 
+   * Сгенерировать данные для графика
+   * 
+   * @param  {} devices - варианты выбора графика
+   * @param  {} parsedData - данные в удобном порядке
+   */
   export function generateChartData(devices, parsedData) {
   
     var currentData = {};
@@ -86,7 +101,12 @@ export function parseData(data) {
     return chartData;
   }
   
-  
+  /**
+   * 
+   * Получить день недели
+   * 
+   * @param  date - Дата
+   */
   function getDayOfWeek(date) {
     var dayOfWeek = new Date(date).getDay();
     return isNaN(dayOfWeek)
@@ -94,6 +114,14 @@ export function parseData(data) {
       : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][dayOfWeek];
   }
   
+/**
+   * 
+   * Вычисление просмотров
+   * 
+   * @param  age - категория возраста
+   * @param  data - данные
+   * @param  days -массив дней
+   */
   function calculateViews(age, data, days){
   
     let result = [];
@@ -120,6 +148,7 @@ export function parseData(data) {
         break;
     }
   
+    //Инициализация данных
     days.forEach(function(){
       result.push(0);
     });
